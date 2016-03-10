@@ -98,4 +98,26 @@ do
 done
 
 
+
+#Append to a txt output
+
+echo "GC Content for $1 ...  " > $1.gcoutput.txt
+NX=${#Headers[@]}
+let NX=$NX-1
+N=0
+H=0
+while test $N -le $NX
+do
+        echo "*** " >> $1.gcoutput.txt
+        echo ${Headers[$N]} >> $1.gcoutput.txt
+        echo "${Percent[$H]} % GC CONTENT" >> $1.gcoutput.txt
+        H=`expr $H + 1`
+        N=`expr $N + 1`
+done
+
+cat $1.gcoutput.txt
+
+
+
+
 ###TROUBLESHOOTING AND ERRORS
