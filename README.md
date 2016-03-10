@@ -1,5 +1,5 @@
 #Abby's Amazing GC Calculator
-**A script to calculate GC content from a FASTA formatted sequencing file.**
+**A script to calculate GC content from a FASTA formatted sequencing file! Amazing for all your sequencing needs!**
 
 ###GENERAL USAGE INSTRUCTIONS
 To calculate the GC content of sequences contained in an appropriate FASTA file, enter the following to the command line: <p>
@@ -84,6 +84,16 @@ Finally, the header and GC content percentage are printed to a txt output. The f
 
 `cat $1.gcoutput.txt`<p>
 
+###ALTERNATE SCRIPT FOR BATCH FILE PROCESSING
+####AKA "THE ELIGIBLE BATCH-ELOR"
+
+In addition to the single-input version of the GC Calculator, there is another version which has the ability to process more than one file at once. The command line input for this script is as follows: <p>
+`./gccontentbatch.sh [FILE1].fa [FILE2].fa [FILE3].fa ... `<p>
+The script for this calculator functions much like the single-input version; however, there are two important caveats.<p>
+- This script should only be used to process multiple inputs. Specifying only one FASTA input may lead to an error message.
+- The outputs of the batch processing will be sent to file and will **NOT** be displayed on the screen! You'll need to open the .txt outputs for each calculation to see the findings. The reason for this is to avoid clogging the terminal with large amounts of information.<p>
+
+At any rate, the ability to process more than one fasta file at once is important in many applications and makes life much simpler.<p>
 
 ###TROUBLESHOOTING AND ERRORS
 
