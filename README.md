@@ -48,18 +48,18 @@ Next, the headers and sequences are seperated into two different arrays. This is
 Next, all the G's and C's within the sequence are obtained and the percentage GC when compared to the total is obtained. The command "expr" is used heavily in this section of code to perform the needed calculations. <p>
 
 `NL=${#Sequences[@]}`<br>
-`echo "Number of Sequences in File: $NL"
-`let NL=$NL-1
-`let X=0
-`while test $X -le $NL
-`do
-`        TOT=`echo ${Sequences[$X]} | wc -m`
-`        TOTFIX=`expr $TOT - 1`
-`        G=`echo ${Sequences[$X]} | grep -roi "g" | wc -m`
-`        C=`echo ${Sequences[$X]} | grep -roi "c" | wc -m`
-`        GC=`expr $G + $C`
-`        GCBIIG=`expr $GC \* 50`
-`        Percent[$X]=`expr $GCBIIG / $TOTFIX`  
+`echo "Number of Sequences in File: $NL"`<br>
+`let NL=$NL-1`<br>
+`let X=0`<br>
+`while test $X -le $NL`<br>
+`do`<br>
+`        TOT='echo ${Sequences[$X]} | wc -m'`<br>
+`        TOTFIX='expr $TOT - 1'`<br>
+`        G='echo ${Sequences[$X]} | grep -roi "g" | wc -m`<br>
+`        C='echo ${Sequences[$X]} | grep -roi "c" | wc -m`<br>
+`        GC='expr $G + $C`<br>
+`        GCBIIG='expr $GC \* 50`<br>
+`        Percent[$X]='expr $GCBIIG / $TOTFIX'`<br>  
 `        let X=$X+1` <br>
 `done` <p>
 
