@@ -17,7 +17,9 @@ The output of the program will appear as follows: <p>
   `0 % GC CONTENT`<br>
   `***` <br>
   `>Sample Header 3`<br>
-  `100 % GC CONTENT`<br>
+  `100 % GC CONTENT`<p>
+  
+The program will also output the results to a txt file called [FILENAME].gcoutput.txt. For example, if you entered the file "coolfasta.fa," the output .txt file would be named "coolfasta.fa.gcoutput.txt." This allows you to run multiple GC content calculations and save the results to use later.<br>
 
 ###FASTA REQUIREMENTS
 The formatting of the FASTA file should be standard to most simple sequencing outputs. Each individual sequence within the file should be formatted as follows: <p>
@@ -25,6 +27,7 @@ The formatting of the FASTA file should be standard to most simple sequencing ou
 > AGTCGTACGTAGCTAGCTAGCTACGTACGATCGATCGATCGATCGATCGATCGATCGATCGATCGAT <p>
 
 Ensuring that the FASTA file is in the appropriate format will prevent errors when running of the program.
+_To learn more about FASTA file formatting, please visit [this link](http://zhanglab.ccmb.med.umich.edu/FASTA/)._
 
 ###SCRIPT WALKTHROUGH
 
@@ -83,3 +86,14 @@ Finally, the header and GC content percentage are printed to a txt output. The f
 
 
 ###TROUBLESHOOTING AND ERRORS
+
+> Q: When I run the program, it outputs the message "Please include a fasta input on the command line!"<br>
+> A: You need to specify a FASTA-formatted file on the command line when you run the script.<p>
+
+> Q: All the spaces where the percentage GC content should be are blank.<br>
+> A: Your sequences has no GC content or may be formatted improperly.<p>
+
+> Q: The program doesn't seem to distinguish headers from the sequence data.<br>
+> A: Make sure that the headers begin with > as in a standard FASTA format.<p>
+
+###
