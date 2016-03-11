@@ -31,7 +31,7 @@ _To learn more about FASTA file formatting, please visit [this link](http://zhan
 
 ###SCRIPT WALKTHROUGH
 
-The first command in the script specifies the programming language; in this case, it is a bash script. <p>
+The first command in the script specifies the programming language; in this case, it is a bash script. You can change this to specify your own computer's path for reading bash shell scripts. <p>
 `#! /bin/sh` <p>
 
 The next few lines assure the user that the program is running with a introductory message and check to ensure that an appropriate FASTA file has been designated for the program. <p> 
